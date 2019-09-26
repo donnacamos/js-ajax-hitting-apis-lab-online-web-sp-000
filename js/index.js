@@ -16,5 +16,5 @@ function displayRepositories(page = 1){
   if(repositories.length > 0){
     getRepositories(page + 1)
   }
-  showRepos(repositories, page == 1); 
+  showRepos(repositories, page == 1);
 }
