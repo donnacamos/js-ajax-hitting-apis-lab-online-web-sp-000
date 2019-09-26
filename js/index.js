@@ -10,3 +10,11 @@ function getRepositories(page = 1){
   req.addEventListener('load', () => displayRepositories.call(req, page));
   req.send();
 }
+
+function displayRepositories(page = 1){
+  let repositories = JSON.parse(this.responseText);
+  if(repositories.length > 0){
+    getRepositories(page + 1)
+  }
+  showRepos(repositories, page == 1); 
+}
