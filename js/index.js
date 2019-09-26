@@ -21,9 +21,9 @@ function displayRepositories(page = 1){
 
 function showRepos(repos, overwrite = true){
     const repoDiv = document.querySelector('#repositories');
-    html = `<ul>${repos.map(r => 
-        '<li>' + r.name 
-        + ' :: <a href="' + r.html_url + '">'+ r.html_url + '</a>' 
+    html = `<ul>${repos.map(r =>
+        '<li>' + r.name
+        + ' :: <a href="' + r.html_url + '">'+ r.html_url + '</a>'
         + ' :: <a href="#" onclick="getCommits(this)" data-commitpath="' + r.commits_url + '">Get Commits</a>'
         + ' :: <a href="#" onclick="getBranches(this)" data-username="' + r.owner.login + '" data-repository = "' + r.name + '">Get Branches</a>'
         + '</li>'
